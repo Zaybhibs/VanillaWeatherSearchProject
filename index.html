@@ -3,11 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="/src/style.css" />
     <title>Vanilla Weather Project</title>
   </head>
   <body>
-    <h1>Vanilla weather</h1>
-    <footer>This project was coded by <a href="#"></a></footer>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="current-details">
+              <span id="current-date">Friday 11:26,</span> moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="current-temperature-icon">☀️</span
+            ><span class="current-temperature-value" id="current-temperature"
+              >24</span
+            ><span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+      </main>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/Zaybhibs">Zainab Olusekun</a> is
+      <a href="https://github.com/Zaybhibs/VanillaWeatherSearchProject"
+        >open-source on Github</a
+      >
+      and <a href="https://projectsix.netlify.app/">hosted on Netlify</a>
+    </footer>
   </body>
 </html>
