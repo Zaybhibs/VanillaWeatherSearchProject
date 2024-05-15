@@ -1,4 +1,7 @@
 function updateWeatherApp(response){
+    
+    let currentCity = document.querySelector("#current_city");
+    currentCity.textContent = `${response.data.city}`;
 let temperatureElement = document.querySelector("#current-temperature");
 temperatureElement.textContent=Math.round(response.data.temperature.current);
 let humidityElement= document.querySelector("#humidity-details");
@@ -11,7 +14,7 @@ let timeElement = document.querySelector("#current-time");
 let date = new Date(response.data.time*1000);
 timeElement.textContent= formattedDate(date);
 let iconElement = document.querySelector("#icon");
-console.log(response.data.condition.icon_url)
+//console.log(response.data.condition.icon_url)
 iconElement.innerHTML = `<img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png"  class="current-temperature-icon"/>`
 }
 
@@ -40,8 +43,6 @@ function searchCity (current_city){
 function searchButton(event){
     event.preventDefault();
     let searchInput = document.querySelector("#search-input");
-    let currentCity = document.querySelector("#current_city");
-    currentCity.textContent = searchInput.value;
      searchCity(searchInput.value);
 }
 
